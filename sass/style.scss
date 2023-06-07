@@ -1,0 +1,1508 @@
+@mixin sectionStyle {
+    .section_title--box {
+        h2 {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-size: 2rem;
+            color: #226174;
+            margin: 3rem 0 3rem;
+        }
+    }
+    .section_content--box {
+        font-size: 1.2rem;
+        width: 90%;
+        color: #226174;
+    }
+}
+
+@mixin fqListStyle {
+    div {
+        margin-bottom: 3rem;
+        h4 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@mixin formStyle {
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.5rem;
+        .input_title {
+            margin-bottom: 0.5rem;
+            color: #226174;
+            font-family: "Roboto", sans-serif;
+            font-size: 1.2rem;
+        }
+        .input_name {
+            display: flex;
+            justify-content: space-between;
+            input {
+                width: 49%;
+                line-height: 2rem;
+                font-size: 1.2rem;
+                margin-bottom: 1.2rem;
+                padding: 0.5rem 1rem;
+                color: #929292;
+                border: #929292 solid 1px;
+                border-radius: 10px;
+            }
+            input:focus {
+                background-color: #eaefed;
+                color: #929292;
+            }
+        }
+        .input_patient {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            input {
+                margin-left: 2rem;
+                accent-color:#226174;
+                font-size: 1.2rem;
+            }
+            label {
+                margin-left: 0.5rem;
+                color: #226174;
+                font-size: 1.2rem;
+            }
+        }
+        .input_message {
+            margin-bottom: 1.2rem;
+            textarea {
+                width: 100%;
+                height: 15rem;
+                font-size: 1.2rem;
+                resize: none;
+                padding: 1rem 1rem;
+                color: #929292;
+                border: #929292 solid 1px;
+                border-radius: 10px;
+            }
+            textarea:focus {
+                background-color: #eaefed;
+                color: #929292;
+            }
+        }
+        .submit_btn {
+            width: 30%;
+            font-size: 1.2rem;
+            background-color: #226174;
+            color: white;
+            padding: 1rem;
+            border: 0;
+            border-radius: 25px;
+            margin: 1rem auto 3rem;
+        }
+        .submit_btn:hover {
+            background-color: #f4605c;
+            color: white;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+    }
+}
+
+@mixin footerStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    i {
+        font-size: 3.5rem;
+        color: #f4605c;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+    .box_title {
+        color: #226174;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .box_text {
+        font-size: 1.2rem;
+        color: #f4605c;
+        text-decoration: none;
+        transition: all 0.5s;
+    }
+    .box_text:hover {
+        color: #226174;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1vw;
+    .page_container {
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 40px grey;
+        opacity: 1;
+    }
+}
+
+//Page Head Nav
+.header_nav--box {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    header {
+        background-color: white;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #logoBox {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 3rem;
+            margin-right: 0.6rem;
+        }
+        h1 {
+            font-size: 1.4rem;
+            color: #226174;
+        }
+    }
+}
+.header_nav--list {
+    height: 5rem;
+    line-height: 5rem;
+    margin-left: 15rem;
+    display: flex;
+    justify-content: center;
+    div {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(83, 83, 83);
+        margin-left: 1rem;
+    }
+
+    a:hover {
+        color: #f4605c;
+        cursor: pointer;
+    }
+
+    .active {
+        color: #f4605c;
+    }
+}
+.noshow {
+    opacity: 0;;
+}
+
+//Page Banner Section
+.main_section--banner {
+    display: flex;
+    justify-content: center;
+    background-color: #f2f4f5;
+    .banner_textContent--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40rem;
+        .slogan {
+            font-size: 2rem;
+            font-family: "Dangrek", sans-serif;
+            color: #226174;
+            font-weight: bolder;
+        }
+        .slogan_description {
+            font-size: 1.2rem;
+            font-family: "Roboto", sans-serif;
+            color: #226174;
+            margin: 2.5rem 0 3.5rem 0;
+        }
+        .button_makeAppointment {
+            width: 15rem;
+            height: 3rem;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #f4605c;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.5s;
+        }
+        .button_makeAppointment:hover {
+            background-color: #226174;
+            cursor: pointer;
+        }
+    }
+    img {
+        width: 25rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+//Page Service Icon Section
+.main_section--service_Icon {
+    display: flex;
+    div {
+        flex: 1;
+        height: 20rem;
+    }
+}
+.consulting_icon_box {
+    background-color: #f4605c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size: 6rem;
+        color: white;
+        margin-bottom: 1.7rem;
+    }
+    p {
+        font-size: 2rem;
+        color: white;
+    }
+}
+.diagnosis_icon_box {
+    background-color: #ca4946;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size: 6rem;
+        color: white;
+        margin-bottom: 1.7rem;
+    }
+    p {
+        font-size: 2rem;
+        color: white;
+    }
+}
+.intervention_icon_box {
+    background-color: #f4605c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size: 6rem;
+        color: white;
+        margin-bottom: 1.7rem;
+    }
+    p {
+        font-size: 2rem;
+        color: white;
+    }
+}
+.test_icon_box {
+    background-color: #ca4946;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    i {
+        font-size: 6rem;
+        color: white;
+        margin-bottom: 1.7rem;
+    }
+    p {
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+//Page About Us Section
+.main_section--intro {
+    margin: 0 auto;
+    width: 80%;
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .intro_content--container {
+        flex: 1;
+        @include sectionStyle;
+        #aboutUs {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        .section_content--box p {
+            font-size: 1.2rem;
+            font-family: "Roboto", sans-serif;
+        }
+    }
+    .intro_photo--container {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 50%;
+            border-radius: 25px;
+            padding: 0.5rem;
+        }
+    }
+}
+
+//Page Our Doctors Section
+.main_section--doctor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e4e8e7;
+    height: 48rem;
+    @include sectionStyle;
+    .section_title--box h2 {
+        margin-bottom: 3rem;
+    }
+    .section_content--box {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+}
+.doc_profile--card {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: space-between;
+    perspective: 1000px;
+    .left_arrow {
+        width: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.5s;
+        img {
+            width: 100%;
+        }
+    }
+    .left_arrow:hover {
+        transform: translateZ(30px);
+        cursor: pointer;
+    }
+    .right_arrow {
+        width: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.5s;
+        img {
+            width: 100%;
+        }
+    }
+    .right_arrow:hover {
+        transform: translateZ(30px);
+        cursor: pointer;
+    }
+}
+.doc_profile--container {
+    width: 20rem;
+    box-shadow: 0 1px 20px rgb(157, 158, 160);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    .doc_profile--box {
+        width: 90%;
+        height: 100%;
+        display: flex;
+    }
+}
+#doc_photo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img {
+        width: 90%;
+        margin-right: 2rem;
+        border-radius: 25px;
+    }
+}
+#doc_profile {
+    flex: 1;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: #226174;
+    }
+    p {
+        font-size: 1.2rem;
+        font-family: "Roboto", sans-serif;
+        color: #226174;
+    }
+    ul {
+        margin-top: 1rem;
+        li {
+            font-size: 1.2rem;
+            font-family: "Roboto", sans-serif;
+            margin-left: 2rem;
+            color: #226174;
+        }
+    }
+    .docRights {
+        border: 1px solid #f4605c;
+        background-color: #f4605c;
+        color: white;
+        width: 90%;
+        font-size: 1rem;
+        border-radius: 25px;
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1rem 0;
+    }
+}
+.blur {
+    filter: blur(1rem);
+}
+
+//Page Our Services Section
+.main_section--service {
+    position: relative;
+    height: 68rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include sectionStyle;
+}
+.section_title--box {
+    h3 {
+        padding: 2rem 0 1rem 0;
+    }
+}
+.section_content--box {
+    div{
+        color: #226174;
+        margin-bottom: 3rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .section_content--text p {
+        font-size: 1.2rem;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 1.2rem;
+    }
+}
+#service_content--box {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 80%;
+            border-radius: 50px;
+            transition: all 0.5s;
+        }
+        img:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 2px 5px rgb(248, 101, 101);
+            cursor: pointer;
+        }
+        p {
+            font-size: 1.2rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+.section_service--detail {
+    width: 40rem;
+    height: fit-content;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px grey;
+    top: -50%;
+    left: -50%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.service_detail--photo {
+        display: flex;
+        justify-content: center;
+        img {
+            margin: 2rem 0;
+            width: 40%;
+            border-radius: 20px;
+        }
+    }
+    .service_detail--container {
+        display: flex;
+        justify-content: center;
+        .service_detail--content {
+            width: 80%;
+            color: #226174;
+            h3 {
+                font-size: 1.4rem;
+                font-family: "Roboto", sans-serif;
+                margin-bottom: 0.5rem;
+            }
+            p, ul, li {
+                font-size: 1.2rem;
+                font-family: "Roboto", sans-serif;
+            }
+            ul li {
+                margin-left: 2rem;
+            }
+        }
+    }
+    .service_detail_button--container {
+        width: 80%;
+        margin: 0 auto;
+        button {
+            width: 5rem;
+            height: 2rem;
+            border: 0;
+            border-radius: 10px;
+            margin-top: 1.2rem;
+            margin-bottom: 2rem;
+            background-color: #f4605c;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.5s;
+        }
+        button:hover {
+            background-color: #226174;
+        }
+    }
+.show {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    margin-left: -20rem;
+    margin-top: -18rem;
+}
+
+//Page F&Q Section
+.main_section--fq {
+    height: 70rem;
+    background-color: #e4e8e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include sectionStyle;
+    .section_title--box {
+        h3 {
+            padding: 2rem 0 1rem 0;
+        }
+    }
+    .section_content--box {
+        width: 80%;
+        font-family: "Roboto", sans-serif;
+        @include fqListStyle;
+        p {
+            margin-bottom: 1.2rem;
+        }
+    }
+}
+
+//Page Contact Us Section
+.main_section--contact {
+    height: 62rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include sectionStyle;
+    .section_title--box {
+        h3 {
+            padding: 2rem 0 1rem 0;
+        }
+    }
+    .section_content--box {
+        width: 80%;
+        @include formStyle;
+    }
+}
+
+//Page Footer
+footer {
+    font-size: 1rem;
+    padding: 2rem 0;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f4f5;
+    .contact_info--container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin-bottom: 5rem;
+        height: 12rem;
+        .call_box {
+            flex: 1;
+            @include footerStyle;
+        }
+        .location_box {
+            flex: 1;
+            @include footerStyle;
+        }
+        .email_box {
+            flex: 1;
+            @include footerStyle;
+        }
+    }
+    .copyRight_container {
+        width: 80%;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #f4605c;
+        margin: 3rem 0 1.5rem 0;
+    }
+}
+
+//for Tablet
+@media screen and (min-width:600px) and (max-width:992px) {
+    
+    @mixin serviceIconStyle {
+        i {
+            font-size: 7rem;
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 2.6rem;
+        }
+    }
+
+    .header_nav--box {
+        header {
+            height: 6rem;
+            img {
+                width: 4.5rem;
+                margin-right: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+    .header_nav--list {
+        div {
+            font-size: 1.6rem;
+        }
+        a {
+            margin-left: 1.6rem;
+        }
+    }
+
+    //Page Banner Section
+    .main_section--banner {
+        .banner_textContent--container {
+            width: 50rem;
+            .slogan {
+                font-size: 2.5rem;
+            }
+            .slogan_description {
+                font-size: 1.8rem;
+            }
+            .button_makeAppointment {
+                width: 24rem;
+                height: 4rem;
+                font-size: 1.8rem;
+            }
+        }
+        img {
+            margin-top: 6rem;
+        }
+    }
+
+    //Page Service Icon Section
+    .main_section--service_Icon {
+        div {
+            height: 30rem;
+        }
+    }
+    .consulting_icon_box {
+        @include serviceIconStyle;
+    }
+    .diagnosis_icon_box {
+        background-color: #ca4946;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include serviceIconStyle;
+    }
+    .intervention_icon_box {
+        background-color: #f4605c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include serviceIconStyle;
+    }
+    .test_icon_box {
+        background-color: #ca4946;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include serviceIconStyle;
+    }
+
+    @mixin sectionStylePad {
+        .section_title--box {
+            margin-top: 3rem;
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+        .section_content--box {
+            width: 90%;
+        }
+    }
+
+    //Page About Us Section
+    .main_section--intro {
+        width: 85%;
+        height: 262rem;
+        flex-direction: column;
+        .intro_content--container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include sectionStylePad;
+            .section_title--box{
+                margin-top: 3rem;
+            }
+            .section_content--box p {
+                font-size: 1.8rem;
+            }
+        }
+        .intro_photo--container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+            img {
+                width: 90%;
+                border-radius: 25px;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+            }
+            #lastImg {
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    //Page Our Doctors Section
+    .main_section--doctor {
+        height: 58rem;
+        @include sectionStyle;
+        .section_title--box h2 {
+            font-size: 2.5rem;
+        }
+        .section_content--box {
+            width: 100%;
+        }
+    }
+    .doc_profile--card {
+        width: 100%;
+        height: 40rem;
+        .left_arrow {
+            margin-right: 1rem;
+        }
+        .right_arrow {
+            margin-left: 1rem;
+        }
+    }
+    .doc_profile--container {
+        flex: 20;
+        width: 100%;
+        .doc_profile--box {
+            width: 100%;
+        }
+    }
+    #doc_photo {
+        img {
+            width: 85%;
+        }
+    }
+    #doc_profile {
+        margin-left: 0;
+        margin-right: 2rem;
+        h3 {
+            font-size: 2.3rem;
+        }
+        p {
+            font-size: 1.8rem;
+        }
+        ul {
+            li {
+                font-size: 1.8rem;
+            }
+        }
+        .docRights {
+            width: 95%;
+            font-size: 1.6rem;
+            border-radius: 15px;
+        }
+    }
+
+    //Page Our Services Section
+    .main_section--service {
+        height: 87rem;
+        .section_title--box h2 {
+            font-size: 2.5rem;
+        }
+    }
+    .section_content--box {
+        div{
+            margin-bottom: 3rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .section_content--text p {
+            font-size: 1.8rem;
+            margin-bottom: 1.8rem;
+        }
+    }
+    #service_content--box {
+        margin-top: 3rem;
+        div{
+            width: 50%;
+            img {
+                width: 90%;
+            }
+            p {
+                font-size: 2rem;
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    .section_service--detail {
+        width: 70rem;
+        .service_detail--content {
+            width: 80%;
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            p, ul, li {
+                font-size: 1.8rem;
+            }
+            ul li {
+                margin-left: 2rem;
+            }
+        }
+        .service_detail_button--container {
+            width: 80%;
+            margin: 0 auto;
+            button {
+                width: 8rem;
+                height: 3rem;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .show {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+        margin-left: -35rem;
+        margin-top: -30rem;
+    }
+
+    //Page F&Q Section
+    .main_section--fq {
+        height: 90rem;
+        .section_title--box {
+            h2 {
+                font-size: 2.5rem;
+                margin: 2rem 0 2rem;
+            }
+        }
+        .section_content--box {
+            font-size: 1.8rem;
+            width: 90%;
+        }
+        .section_title--box {
+            h3 {
+                padding: 2rem 0 1rem 0;
+            }
+        }
+        .section_content--box {
+            width: 85%;
+            div {
+                margin-bottom: 3rem;
+                h4 {
+                    margin-bottom: 1rem;
+                    font-size: 2.2rem;
+                }
+                p {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    //Page Contact Us Section
+    .main_section--contact {
+        height: 80rem;
+        .section_title--box {
+            h2 {
+                font-size: 2.5rem;
+                margin: 2rem 0 2rem;
+            }
+        }
+        .section_content--box {
+            width: 90%;
+        }
+        .section_title--box {
+            h3 {
+                padding: 2rem 0 1rem 0;
+            }
+        }
+        @mixin formStylePad {
+            form {
+                .input_title {
+                    font-size: 1.8rem;
+                    margin-bottom: 1.2rem;
+                }
+                .input_name {
+                    input {
+                        width: 49%;
+                        height: 4rem;
+                        font-size: 1.8rem;
+                        margin-bottom: 2rem;
+                        padding: 0 1.5rem;
+                        color: #929292;
+                    }
+                    input:focus {
+                        background-color: #eaefed;
+                        color: #929292;
+                    }
+                }
+                .input_patient {
+                    margin-bottom: 1.5rem;
+                    input {
+                        margin-left: 2rem;
+                        height: 4rem;
+                        line-height: 4rem;
+                    }
+                    label {
+                        font-size: 1.8rem;
+                        margin-left: 0.5rem;
+                    }
+                }
+                .input_message {
+                    margin-bottom: 1.5rem;
+                    textarea {
+                        width: 100%;
+                        height: 18rem;
+                        font-size: 1.8rem;
+                        padding: 1.2rem 1.5rem;
+                    }
+                }
+                .submit_btn {
+                    font-size: 2rem;
+                    padding: 1rem;
+                    margin: 2rem auto;
+                }
+            }
+        }
+        .section_content--box {
+            width: 85%;
+            @include formStylePad
+        }
+    }
+
+    //Page Footer
+    @mixin footerBoxStyle {
+        .box_title {
+            font-size: 1.8rem;
+        }
+        .box_text {
+            font-size: 1.6rem;
+        }
+    }
+    footer {
+        font-size: 2.3rem;
+        .contact_info--container {
+            width: 100%;
+            .call_box {
+                flex: 1;
+                @include footerBoxStyle
+            }
+            .location_box {
+                flex: 1;
+                @include footerBoxStyle
+            }
+            .email_box {
+                flex: 1;
+                @include footerBoxStyle
+            }
+        }
+        .copyRight_container p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+//for mobile phone
+@media screen and (max-width:599px) {
+    @mixin serviceIconStyle {
+        i {
+            font-size: 12rem;
+            margin-top: 10rem;
+            margin-bottom: 3.5rem;
+        }
+        p {
+            font-size: 4rem;
+            margin-bottom: 10rem;
+        }
+    }
+
+    .header_nav--box {
+        header {
+            display: flex;
+            flex-direction: column;
+            height: 12rem;
+            #logoBox {
+                margin-top: 2rem;
+            }
+            img {
+                width: 4rem;
+                margin-right: 1.5rem;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+    .header_nav--list {
+        margin: 0 auto;
+        margin-top: 1rem;
+        div {
+            font-size: 2.5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+    }
+
+    //Page Banner Section
+    .main_section--banner {
+        .banner_textContent--container {
+            width: 65rem;
+            .slogan {
+                font-size: 3.5rem;
+                margin-bottom: 2rem;
+                margin-top: 4rem;
+            }
+            .slogan_description {
+                font-size: 3rem;
+                margin-bottom: 5rem;
+            }
+            .button_makeAppointment {
+                width: 35rem;
+                height: 8rem;
+                font-size: 3rem;
+                margin-bottom: 4rem;
+            }
+        }
+        img {
+            margin-top: 44rem;
+        }
+    }
+
+    //Page Service Icon Section
+    .main_section--service_Icon {
+        flex-direction: column;
+    }
+    .consulting_icon_box {
+        background-color: #f4605c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include serviceIconStyle;
+    }
+    .diagnosis_icon_box {
+        background-color: #ca4946;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include serviceIconStyle;
+    }
+    .intervention_icon_box {
+        background-color: #f4605c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include serviceIconStyle;
+    }
+    .test_icon_box {
+        background-color: #ca4946;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include serviceIconStyle;
+    }
+
+    @mixin sectionStylePhone {
+        .section_title--box {
+            h2 {
+                font-size: 3.5rem;
+                margin-bottom: 4rem;
+            }
+        }
+        .section_content--box p {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        };
+        .section_content--box {
+            width: 100%;
+        }
+    }
+
+    //Page About Us Section
+    .main_section--intro {
+        width: 85%;
+        height: 315rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 5rem;
+        .intro_content--container {
+            @include sectionStylePhone;
+            #aboutUs {
+                justify-content: center;
+            }
+            .section_title--box {
+                margin-top: 0;
+            }
+        }
+        .intro_photo--container {
+            img {
+                width: 100%;
+                border-radius: 25px;
+                margin-bottom: 3rem;
+            }
+            #lastImg {
+                margin-bottom: 6rem;
+            }
+        }
+    }
+
+    //Page Our Doctors Section
+    .main_section--doctor {
+        height: 145rem;
+        @include sectionStylePhone;
+        .section_title--box {
+            margin-top: 0;
+        }
+        .section_content--box {
+            width: 100%;
+        }
+    }
+    .doc_profile--card {
+        height: 125rem;
+        .left_arrow {
+            width: 10rem;
+            margin-right: 1rem;
+        }
+        .right_arrow {
+            width: 10rem;
+            margin-left: 1rem;
+        }
+    }
+    .doc_profile--container {
+        .doc_profile--box {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    #doc_photo {
+        img {
+            width: 80%;
+        }
+    }
+    #doc_profile {
+        justify-content: flex-start;
+        margin: 0 auto;
+        h3 {
+            font-size: 3.2rem;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 3rem;
+        }
+        p {
+            font-size: 3rem;
+            margin-left: 3rem;
+            margin-bottom: 1.2rem;
+        }
+        ul {
+            li {
+                font-size: 3rem;
+                margin-left: 4rem;
+                margin-bottom: 1.2rem;
+            }
+        }
+        .docRights {
+            width: 100%;
+            font-size: 2.8rem;
+            border-radius: 15px;
+            margin: auto 0;
+        }
+    }
+
+    //Page Our Services Section
+    .main_section--service {
+        height: 315rem;
+        align-items: center;
+        @include sectionStylePhone;
+        .section_title--box {
+            margin-top: 4rem;
+        }
+    }
+    .section_content--box {
+        width: 100%;
+        div{
+            margin-bottom: 3rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .section_content--text {
+            width: 85%;
+        }
+        .section_content--text p {
+            margin-bottom: 2rem;
+        }
+    }
+    #service_content--box {
+        margin-top: 3rem;
+        flex-direction: column;
+        div{
+            width: 100%;
+            img {
+                width: 95%;
+                border-radius: 25px;
+            }
+            p {
+                font-size: 3.2rem;
+                margin-top: 3rem;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+    .section_service--detail {
+        width: 100%;
+        .service_detail--photo {
+            img {
+                margin: 15rem 0 5rem 0;
+                width: 80%;
+                border-radius: 20px;
+            }
+        }
+        .service_detail--content {
+            width: 80%;
+            h3 {
+                font-size: 3.2rem;
+                margin-bottom: 4rem;
+            }
+            p, ul, li {
+                font-size: 3rem;
+            }
+            ul li {
+                margin-left: 3rem;
+            }
+        }
+        .service_detail_button--container {
+            width: 80%;
+            margin: 0 auto;
+            button {
+                width: 12rem;
+                height: 5rem;
+                margin-top: 4rem;
+                margin-bottom: 15rem;
+                font-size: 3rem;
+            }
+        }
+    }
+    .show {
+        opacity: 1;
+        margin-left: -50%;
+        margin-top: -70%;
+    }
+
+    //Page F&Q Section
+    .main_section--fq {
+        height: 212rem;
+        @include sectionStylePhone;
+        .section_title--box {
+            margin-top: 0;
+            h2 {
+                font-size: 3.5rem;
+                margin-bottom: 4rem;
+            }
+        }
+        .section_content--box {
+            font-size: 2.8rem;
+        }
+        .section_content--box {
+            width: 90%;
+            div {
+                margin-bottom: 6rem;
+                h4 {
+                    margin-bottom: 3rem;
+                    font-size: 3.2rem;
+                }
+                p {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    @mixin formStylePhone {
+        form {
+            .input_title {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+            .input_name {
+                display: flex;
+                flex-direction: column;
+                input {
+                    width: 100%;
+                    height: 6rem;
+                    font-size: 3rem;
+                    margin-bottom: 3rem;
+                    padding: 0 3rem;
+                    color: #929292;
+                }
+                input:focus {
+                    background-color: #eaefed;
+                    color: #929292;
+                }
+            }
+            .input_patient {
+                margin-bottom: 3rem;
+                input {
+                    margin-left: 2rem;
+                    height: 2rem;
+                    line-height: 2rem;
+                }
+                label {
+                    font-size: 3rem;
+                    margin-left: 0.5rem;
+                }
+            }
+            .input_message {
+                margin-bottom: 1.5rem;
+                textarea {
+                    width: 100%;
+                    height: 30rem;
+                    font-size: 3rem;
+                    padding: 1.5rem 3rem;
+                }
+            }
+            .submit_btn {
+                font-size: 3rem;
+                padding: 1.5rem;
+                margin: 3rem auto;
+            }
+        }
+    }
+    //Page Contact Us Section
+    .main_section--contact {
+        height: 130rem;
+        @include sectionStylePhone;
+        .section_title--box {
+            margin-top: 0;
+        }
+        .section_content--box {
+            width: 85%;
+            @include formStylePhone
+        }
+    }
+
+    //Page Footer
+    @mixin footerBoxStyle {
+        .box_title {
+            font-size: 3.5rem;
+            margin-bottom: 3rem;
+        }
+        .box_text {
+            font-size: 3rem;
+            margin-bottom: 5rem;
+        }
+    }
+    footer {
+        font-size: 3rem;
+        height: 120rem;
+        display: flex;
+        .contact_info--container {
+            width: 100%;
+            height: fit-content;
+            flex-direction: column;
+            .call_box {
+                flex: 1;
+                i {
+                    font-size: 12rem;
+                    margin-bottom: 3rem;
+                }
+                @include footerBoxStyle
+            }
+            .location_box {
+                flex: 1;
+                i {
+                    font-size: 10rem;
+                    margin-bottom: 3rem;
+                }
+                @include footerBoxStyle
+            }
+            .email_box {
+                flex: 1;
+                i {
+                    font-size: 12rem;
+                    margin-bottom: 3rem;
+                }
+                @include footerBoxStyle
+            }
+        }
+        .copyRight_container p {
+            font-size: 2rem;
+        }
+    }
+}
